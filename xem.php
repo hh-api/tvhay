@@ -200,9 +200,10 @@ $vs3 = explode('+++', $get_auto)['2'];
 <?php if ($vs2) { ?><button class="btn btn-sm btn-gray grayy" onclick="document.getElementById('otvhay').src = '<?php echo $vs2; ?>'">S.VS</button> <?php } ?>
 <?php if ($vs3) { ?><button class="btn btn-sm btn-gray grayy" onclick="document.getElementById('otvhay').src = '<?php echo $vs3; ?>'">Z.VS</button> <?php } ?>
 </div>
+<br/><br/>                                    
                                 </div>
                             </div>
-<br/>                            
+                            
                         </div>
                     </div>
                 </div>
