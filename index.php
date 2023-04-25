@@ -76,9 +76,9 @@ echo 'Tập '.$stt; } else { echo 'Full '.$stt; } ?></div>
 
 <div class="wp-pagenavi">
 <a href="/index.php">Đầu</a>
-<a href="/index.php?page=<?php if ($page > 1) { echo $page - 1; } else { echo '1'; }?>"><=</a>
+<a href="/index.php?page=<?php if ($page > 1) { echo $page - 1; } else { echo '1'; }?>&type=<?php echo $type; ?>"><=</a>
 <a class="current"><font color="red"><?php if ($trang) { echo $_GET['trang'];} else { echo '1'; } ?></font></a>
-<a href="/index.php?page=<?php if ($page > 1) { echo $page + 1; } else { echo '2'; }?>">=></a>
+<a href="/index.php?page=<?php if ($page > 1) { echo $page + 1; } else { echo '2'; }?>&type=<?php echo $type; ?>">=></a>
 </div>
     
 </div>
