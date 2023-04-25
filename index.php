@@ -31,10 +31,12 @@ $type = str_replace(' ', '%20', $type);
 <div class="tab all">
 <ul class="list-film">
 <?php 
-if ($page > 1) {
-$html = curl('https://www.blogger.com/feeds/5770045855602829491/posts/default?max-results='.(20*($page - 1)).'&start-index='.(20*($page - 1) + 1));
+if (($page > 1) and (!$type)) {
+$html = curl('https://www.blogger.com/feeds/5770045855602829491/posts/default?max-results=20&start-index='.(20*($page - 1) + 1));
+} elseif (($page > 1) and ($type)) {
+$html = file_get_contents('https://www.blogger.com/feeds/5770045855602829491/posts/default/-/'.$type.'?max-results=20&start-index='.(20*($page - 1) + 1));    
 } elseif ($type) {
-$html = file_get_contents('https://www.blogger.com/feeds/5770045855602829491/posts/default/-/'.$type);    
+$html = file_get_contents('https://www.blogger.com/feeds/5770045855602829491/posts/default/-/'.$type.'?max-results=20');     
 } else {
 $html = curl('https://www.blogger.com/feeds/5770045855602829491/posts/default?max-results=20');    
 }
