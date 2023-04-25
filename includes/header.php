@@ -32,7 +32,7 @@ $description = 'Web xem phim anime online tiếng việt, phim anime vietsub, t�
 <meta name="robots" content="index,follow" />
 <meta http-equiv="content-language" content="vi" />
 </head>
-<link href="/includes/main.css" type='text/css' rel='stylesheet' media='all' />
+<link href="/includes/main.css" type='text/css' rel='stylesheet'/>
 <script src="/includes/tvhay.js" type="text/javascript"></script>
 <body>
 <div id="wrapper">
