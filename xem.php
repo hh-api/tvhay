@@ -162,21 +162,20 @@ $vs3 = explode('+++', $get_auto)['2'];
                         </div>
 <div class="action"><div class="like">
 <span><?php $view = './view/'.$slug.'.php'; echo $view1 = file_get_contents($view) + mt_rand(1, 9); $myfile2 = fopen($view, "w"); fwrite($myfile2, $view1); fclose($myfile2); ?> Like</span></div>
-<div class="remove-ad">Ghi Nhớ</div>
-<a href="<?php if (($tap > 1) and ($tap != 'Full'))  { echo '/'.($tap-1).'/'.$slug.'.html'; } else { echo '#'; } ?>"><div title="Chuyển Tập Trước" class="auto-next">Sau</div></a>
+<a href="<?php if (($tap > 1) and ($tap != 'Full'))  { echo '/'.($tap-1).'/'.$slug.'.html'; } else { echo '#'; } ?>"><div title="Chuyển Tập Trước" class="auto-next"><< Sau</div></a>
 <div style="background:green; color:white;" title="Đang Xem Tập <?php echo $tap; ?>" class="auto-next">Đang Xem Tập <?php echo $tap; ?></div>
-<a href="<?php if (($tap > 0 ) and ($tap != 'Full')) { echo '/'.($tap+1).'/'.$slug.'.html'; } else { echo '#'; } ?>"><div title="Chuyển Tập Tiếp Theo" class="auto-next">Tiếp</div></a>
+<a href="<?php if (($tap > 0 ) and ($tap != 'Full')) { echo '/'.($tap+1).'/'.$slug.'.html'; } else { echo '#'; } ?>"><div title="Chuyển Tập Tiếp Theo" class="auto-next">Tiếp >></div></a>
 </div>                        
-                        
+<br/>                         
                         <div class="player-bar">
                             <div class="list-server" id="list-server">
                                 <div class="server-item">
+                                    
 <style>
 .grayy{
     border: 1px solid#aaa;
     padding: 5px;
     border-radius: 3px;
-    border: none;
     font-size: 15px;
     margin-left: 5px;
 }
@@ -186,7 +185,6 @@ $vs3 = explode('+++', $get_auto)['2'];
     background-color: #d9534f;
     padding: 5px;
     border-radius: 3px;
-    border: none;
     font-size: 15px;
     margin-left: 5px;
 }
@@ -196,18 +194,19 @@ $vs3 = explode('+++', $get_auto)['2'];
 <?php if ($tm1) { ?><button class="btn btn-sm btn-gray redd" onclick="document.getElementById('otvhay').src = '<?php echo $tm1; ?>'">G.PRO</button> <?php } ?>
 <?php if ($tm2) { ?><button class="btn btn-sm btn-gray grayy" onclick="document.getElementById('otvhay').src = '<?php echo $tm2; ?>'">S.PRO</button> <?php } ?>
 <?php if ($tm3) { ?><button class="btn btn-sm btn-gray grayy" onclick="document.getElementById('otvhay').src = '<?php echo $tm3; ?>'">Z.PRO</button> <?php } ?>
-<?php if ($vs1) { ?><button class="btn btn-sm btn-gray <?php if(!$tm1) echo 'redd'; ?>" onclick="document.getElementById('otvhay').src = '<?php echo $vs1; ?>'">G.VS</button> <?php } ?>
+<?php if ($vs1) { ?><button class="btn btn-sm btn-gray <?php if(!$tm1) { echo 'redd'; } else { echo 'grayy'; } ?>" onclick="document.getElementById('otvhay').src = '<?php echo $vs1; ?>'">G.VS</button> <?php } ?>
 <?php if ($vs2) { ?><button class="btn btn-sm btn-gray grayy" onclick="document.getElementById('otvhay').src = '<?php echo $vs2; ?>'">S.VS</button> <?php } ?>
 <?php if ($vs3) { ?><button class="btn btn-sm btn-gray grayy" onclick="document.getElementById('otvhay').src = '<?php echo $vs3; ?>'">Z.VS</button> <?php } ?>
 </div>
-<br/><br/>                                    
+
+<br/><br/>
                                 </div>
+                                
                             </div>
                             
                         </div>
                     </div>
                 </div>
-              
                 <div class="block" id="detail">
                    
                     <div class="blockbody">
