@@ -148,7 +148,7 @@ fclose($myfile1);
                                 <dd><?php echo $hd; ?></dd><dt>Thời Lượng:</dt>
                                 <dd>N/A</dd>
                                 <dt>Lượt Xem:</dt>
-                                <dd><?php $view = './view/'.$slug.'.php'; echo $view1 = file_get_contents($view) + mt_rand(1, 9); $myfile2 = fopen($view, "w"); fwrite($myfile2, $view1); fclose($myfile2); ?></dd>
+                                <dd><?php $view = './view/'.$slug.'.php'; echo $view1 = file_get_contents($view) + mt_rand(1, 9); $myfile2 = fopen($view, "w"); fwrite($myfile2, $view1); fclose($myfile2); ?> 💕</dd>
                             </dl>
                         </div>
                         <div class="btn-groups fr">
