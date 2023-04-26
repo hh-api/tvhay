@@ -191,9 +191,9 @@ $vs3 = explode('+++', $get_auto)['2'];
 </style>
                                   
 <div style="margin-left:10px;display: inline-block;">
-<?php if ($tm1) { ?><button class="btn btn-sm btn-gray redd" onclick="document.getElementById('otvhay').src = '<?php echo $tm1; ?>'">G.PRO</button> <?php } ?>
-<?php if ($tm2) { ?><button class="btn btn-sm btn-gray grayy" onclick="document.getElementById('otvhay').src = '<?php echo $tm2; ?>'">S.PRO</button> <?php } ?>
-<?php if ($tm3) { ?><button class="btn btn-sm btn-gray grayy" onclick="document.getElementById('otvhay').src = '<?php echo $tm3; ?>'">Z.PRO</button> <?php } ?>
+<?php if ($tm1) { ?><button class="btn btn-sm btn-gray redd" onclick="document.getElementById('otvhay').src = '<?php echo $tm1; ?>'">G.TM</button> <?php } ?>
+<?php if ($tm2) { ?><button class="btn btn-sm btn-gray grayy" onclick="document.getElementById('otvhay').src = '<?php echo $tm2; ?>'">S.TM</button> <?php } ?>
+<?php if ($tm3) { ?><button class="btn btn-sm btn-gray grayy" onclick="document.getElementById('otvhay').src = '<?php echo $tm3; ?>'">Z.TM</button> <?php } ?>
 <?php if ($vs1) { ?><button class="btn btn-sm btn-gray <?php if(!$tm1) { echo 'redd'; } else { echo 'grayy'; } ?>" onclick="document.getElementById('otvhay').src = '<?php echo $vs1; ?>'">G.VS</button> <?php } ?>
 <?php if ($vs2) { ?><button class="btn btn-sm btn-gray grayy" onclick="document.getElementById('otvhay').src = '<?php echo $vs2; ?>'">S.VS</button> <?php } ?>
 <?php if ($vs3) { ?><button class="btn btn-sm btn-gray grayy" onclick="document.getElementById('otvhay').src = '<?php echo $vs3; ?>'">Z.VS</button> <?php } ?>
