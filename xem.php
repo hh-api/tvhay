@@ -161,7 +161,7 @@ $vs3 = explode('+++', $get_auto)['2'];
                             </div>
                         </div>
 <div class="action"><div class="like">
-<span><?php $view = './view/'.$slug.'.php'; echo $view1 = file_get_contents($view) + mt_rand(1, 9); $myfile2 = fopen($view, "w"); fwrite($myfile2, $view1); fclose($myfile2); ?> Like</span></div>
+<span><?php $view = './view/'.$slug.'.php'; echo $view1 = file_get_contents($view) + mt_rand(1, 9); $myfile2 = fopen($view, "w"); fwrite($myfile2, $view1); fclose($myfile2); ?> 💕</span></div>
 <a href="<?php if (($tap > 1) and ($tap != 'Full'))  { echo '/'.($tap-1).'/'.$slug.'.html'; } else { echo '#'; } ?>"><div title="Chuyển Tập Trước" class="auto-next"><< Sau</div></a>
 <div style="background:green; color:white;" title="Đang Xem Tập <?php echo $tap; ?>" class="auto-next">Đang Xem Tập <?php echo $tap; ?></div>
 <a href="<?php if (($tap > 0 ) and ($tap != 'Full')) { echo '/'.($tap+1).'/'.$slug.'.html'; } else { echo '#'; } ?>"><div title="Chuyển Tập Tiếp Theo" class="auto-next">Tiếp >></div></a>
