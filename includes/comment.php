@@ -75,7 +75,7 @@ if ($_SESSION['name']) {?>
   <div class="flex bg-comment">
     <div class="left">
       <div class="avatar">
-        <img src="https://dataqq.net/tvhay/user/1/avatar.jpg?v=1681302739" class="avatar-main">
+        <img src="https://cdn.jsdelivr.net/gh/hh-api/img@main/Khách Ẩn Danh.jpg" class="avatar-main">
         <img src="https://dataqq.net/store/avatar/s14.gif?3" class="avatar-level">
         <span class="member level-19">
           <span data-level="19">Cấp <?php echo mt_rand(00, 99); ?></span>
