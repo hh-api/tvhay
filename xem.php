@@ -92,26 +92,26 @@ fclose($myfile1);
 }
 ?>
 
-<title><?php echo $tenphim;?> - <?php echo $tengoc;?> - Tập <?php echo $tap;?>  | oTVHAY.ORG</title>
+<title><?php echo $tenphim;?> - <?php echo $tengoc;?> - Tập <?php echo $tap;?>  | hhapi.ORG</title>
 
-    <meta name="description" content="Xem <?php echo $tenphim;?> - <?php echo $tengoc;?>  Thuyết minh, Lồng tiếng hay nhất tại oTVHAY.ORG" />
-    <link rel="canonical" href="https://otvhay.org/<?php echo $idphim;?>.html" />
-    <meta name="keywords" content="oTVHAY.ORG Thuyết Minh" />
-    <meta name="author" content="oTVHAY.ORG" />
+    <meta name="description" content="Xem <?php echo $tenphim;?> - <?php echo $tengoc;?>  Thuyết minh, Lồng tiếng hay nhất tại hhapi.ORG" />
+    <link rel="canonical" href="https://hhapi.org/<?php echo $idphim;?>.html" />
+    <meta name="keywords" content="hhapi.ORG Thuyết Minh" />
+    <meta name="author" content="hhapi.ORG" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="<?php echo $tenphim;?> - <?php echo $tengoc;?> (<?php echo $nc;?>) | oTVHAY.ORG" />
-    <meta name="twitter:description" content="Xem <?php echo $tenphim;?> - <?php echo $tengoc;?> (<?php echo $nc;?>) Thuyết minh, Lồng tiếng hay nhất tại oTVHAY.ORG" />
+    <meta name="twitter:title" content="<?php echo $tenphim;?> - <?php echo $tengoc;?> (<?php echo $nc;?>) | hhapi.ORG" />
+    <meta name="twitter:description" content="Xem <?php echo $tenphim;?> - <?php echo $tengoc;?> (<?php echo $nc;?>) Thuyết minh, Lồng tiếng hay nhất tại hhapi.ORG" />
     <meta name="twitter:image" content="<?php echo $thumb;?>" />
-    <meta property="og:site_name" content="oTVHAY.ORG" />
+    <meta property="og:site_name" content="hhapi.ORG" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://otvhay.org/<?php echo $idphim;?>.html" />
-    <meta property="og:title" content="<?php echo $tenphim;?> - <?php echo $tengoc;?> (<?php echo $nc;?>) | oTVHAY.ORG" />
+    <meta property="og:url" content="https://hhapi.org/<?php echo $idphim;?>.html" />
+    <meta property="og:title" content="<?php echo $tenphim;?> - <?php echo $tengoc;?> (<?php echo $nc;?>) | hhapi.ORG" />
     <meta property="og:image" content="<?php echo $thumb;?>" />
-    <meta property="og:description" content="Xem <?php echo $tenphim;?> - <?php echo $tengoc;?> (<?php echo $nc;?>) Thuyết minh, Lồng tiếng hay nhất tại oTVHAY.ORG" />
+    <meta property="og:description" content="Xem <?php echo $tenphim;?> - <?php echo $tengoc;?> (<?php echo $nc;?>) Thuyết minh, Lồng tiếng hay nhất tại hhapi.ORG" />
     <meta property="og:locale" content="vi_VN" />
     <meta http-equiv="content-language" content="vi" />
-    <meta itemprop="name" content="<?php echo $tenphim;?> - <?php echo $tengoc;?> (<?php echo $nc;?>) | oTVHAY.ORG" />
-    <meta itemprop="description" content="Xem <?php echo $tenphim;?> - <?php echo $tengoc;?> (<?php echo $nc;?>) Thuyết minh, Lồng tiếng hay nhất tại oTVHAY.ORG" />
+    <meta itemprop="name" content="<?php echo $tenphim;?> - <?php echo $tengoc;?> (<?php echo $nc;?>) | hhapi.ORG" />
+    <meta itemprop="description" content="Xem <?php echo $tenphim;?> - <?php echo $tengoc;?> (<?php echo $nc;?>) Thuyết minh, Lồng tiếng hay nhất tại hhapi.ORG" />
     <meta itemprop="image" content="<?php echo $thumb;?>" />
 
 </head>    
@@ -122,7 +122,7 @@ fclose($myfile1);
             <div id="page-watch">
                 <div class="block" id="movie">
                     <div class="blocktitle breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-                        <div class="item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/" title="oTVHAY.ORG" itemprop="item"><span itemprop="name">Trang Chủ</span></a>
+                        <div class="item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/" title="hhapi.ORG" itemprop="item"><span itemprop="name">Trang Chủ</span></a>
                             <meta itemprop="position" content="1">
                         </div>
                         <div class="item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/<?php echo $slug;?>.html" title="<?php echo $tenphim;?>" itemprop="item"><span itemprop="name"> / <?php echo $tenphim;?></span></a>
@@ -152,29 +152,41 @@ $vs3 = explode('+++', $get_auto)['2'];
 }   
 ?>
                     
-                    <div class="blockbody">
+                    <div class="blockbody" style="padding: 0px;">
                         <div id="media" style="position:relative">
                             <div class="player">
                                 <div class="box-player" id="box-player">
-                                    <div id="media-player"><iframe id="otvhay" width="100%" height="380px" src="<?php if ($tm1) { echo $tm1; } else { echo $vs1; } ?>" frameborder="0" scrolling="0" allowfullscreen></iframe></div>
+                                    <div id="media-player"><iframe id="hhapi" width="100%" height="380px" src="<?php if ($tm1) { echo $tm1; } else { echo $vs1; } ?>" frameborder="0" scrolling="0" allowfullscreen></iframe></div>
                                 </div>
                             </div>
                         </div>
-<div class="action"><div class="like">
-<span><?php $view = './view/'.$slug.'.php'; echo $view1 = file_get_contents($view) + mt_rand(1, 9); $myfile2 = fopen($view, "w"); fwrite($myfile2, $view1); fclose($myfile2); ?> 💕</span></div>
-<a href="<?php if (($tap > 1) and ($tap != 'Full'))  { echo '/'.($tap-1).'/'.$slug.'.html'; } else { echo '#'; } ?>"><div title="Chuyển Tập Trước" class="auto-next"><< Sau</div></a>
-<div style="background:green; color:white;" title="Đang Xem Tập <?php echo $tap; ?>" class="auto-next">Đang Xem Tập <?php echo $tap; ?></div>
-<a href="<?php if (($tap > 0 ) and ($tap != 'Full')) { echo '/'.($tap+1).'/'.$slug.'.html'; } else { echo '#'; } ?>"><div title="Chuyển Tập Tiếp Theo" class="auto-next">Tiếp >></div></a>
-</div>                        
-<br/>                         
-                        <div class="player-bar">
-                            <div class="list-server" id="list-server">
-                                <div class="server-item">
+
+<table width="100%">
+<tr>
+<td style="width:30%; padding: 5px 12px;border: 1px solid#888;background:#7303c0; color:white; text-align:center" onclick="window.location='<?php if (($tap > 1) and ($tap != 'Full'))  { echo '/'.($tap-1).'/'.$slug.'.html'; } else { echo '#'; } ?>'">« Tập Trước</td>
+<td style="width:40%; padding: 5px 12px;border: 1px solid#888;background:green; color:white; text-align:center"><?php $view = './view/'.$slug.'.php'; echo $view1 = file_get_contents($view) + mt_rand(1, 9); $myfile2 = fopen($view, "w"); fwrite($myfile2, $view1); fclose($myfile2); ?> 💕</td> 
+<td style="width:30%; padding: 5px 12px;border: 1px solid#888;background:#cc5333; color:white; text-align:center" onclick="window.location='<?php if (($tap > 0 ) and ($tap != 'Full')) { echo '/'.($tap+1).'/'.$slug.'.html'; } else { echo '#'; } ?>'">Tập Sau »</td> 
+</tr>
+</table>
+
+<div class="serverlist" id="list-server" style="padding:10px;margin: 10px 2px 2px;">
+    <div class="server-item">
+    <div style="display: inline-block;margin-right:5px"> <span>Server</span> </div>
+<div style="display: inline-block;">
+<?php if ($tm1) { ?><button class="btn btn-sm btn-gray redd" onclick="document.getElementById('hhapi').src = '<?php echo $tm1; ?>'">G.TM</button> <?php } ?>
+<?php if ($tm2) { ?><button class="btn btn-sm btn-gray grayy" onclick="document.getElementById('hhapi').src = '<?php echo $tm2; ?>'">S.TM</button> <?php } ?>
+<?php if ($tm3) { ?><button class="btn btn-sm btn-gray grayy" onclick="document.getElementById('hhapi').src = '<?php echo $tm3; ?>'">Z.TM</button> <?php } ?>
+<?php if ($vs1) { ?><button class="btn btn-sm btn-gray <?php if(!$tm1) { echo 'redd'; } else { echo 'grayy'; } ?>" onclick="document.getElementById('hhapi').src = '<?php echo $vs1; ?>'">G.VS</button> <?php } ?>
+
+<?php if ($vs2) { ?><button class="btn btn-sm btn-gray grayy" onclick="document.getElementById('hhapi').src = '<?php echo $vs2; ?>'">S.VS</button> <?php } ?>
+<?php if ($vs3) { ?><button class="btn btn-sm btn-gray grayy" onclick="document.getElementById('hhapi').src = '<?php echo $vs3; ?>'">Z.VS</button> <?php } ?>
+</div></div></div>                        
+
                                     
 <style>
 .grayy{
     border: 1px solid#aaa;
-    padding: 5px;
+    padding: 4px;
     border-radius: 3px;
     font-size: 15px;
     margin-left: 5px;
@@ -182,43 +194,17 @@ $vs3 = explode('+++', $get_auto)['2'];
 .redd {
     border: 1px solid#aaa;
     color: white;
-    background-color: #d9534f;
-    padding: 5px;
+    background-color: #c0205e;
+    border-color: #c0205e;
+    padding: 4px;
     border-radius: 3px;
     font-size: 15px;
     margin-left: 5px;
 }
 </style>
-                                  
-<div style="margin-left:10px;display: inline-block;">
-<?php if ($tm1) { ?><button class="btn btn-sm btn-gray redd" onclick="document.getElementById('otvhay').src = '<?php echo $tm1; ?>'">G.TM</button> <?php } ?>
-<?php if ($tm2) { ?><button class="btn btn-sm btn-gray grayy" onclick="document.getElementById('otvhay').src = '<?php echo $tm2; ?>'">S.TM</button> <?php } ?>
-<?php if ($tm3) { ?><button class="btn btn-sm btn-gray grayy" onclick="document.getElementById('otvhay').src = '<?php echo $tm3; ?>'">Z.TM</button> <?php } ?>
-<?php if ($vs1) { ?><button class="btn btn-sm btn-gray <?php if(!$tm1) { echo 'redd'; } else { echo 'grayy'; } ?>" onclick="document.getElementById('otvhay').src = '<?php echo $vs1; ?>'">G.VS</button> <?php } ?>
-<?php if ($vs2) { ?><button class="btn btn-sm btn-gray grayy" onclick="document.getElementById('otvhay').src = '<?php echo $vs2; ?>'">S.VS</button> <?php } ?>
-<?php if ($vs3) { ?><button class="btn btn-sm btn-gray grayy" onclick="document.getElementById('otvhay').src = '<?php echo $vs3; ?>'">Z.VS</button> <?php } ?>
-</div>
-
-<br/><br/>
-                                </div>
-                                
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="block" id="detail">
-                   
-                    <div class="blockbody">
-
-                        <div id="servers" class="serverlist">
-                            <div class="player-cc">
-                                <div></div>
-                            </div>
-                            <div class="server">
 <script type="text/javascript">
 function go(loc) {
-    document.getElementById('otvhay').src = loc;
+    document.getElementById('hhapi').src = loc;
      }
 var buttons = $('button').click(function(){
   buttons.not(this).addClass('grayy');
@@ -226,7 +212,35 @@ var buttons = $('button').click(function(){
   $(this).addClass('redd');
 });
 </script>
-<ul class="episodelist">
+<br/>                                  
+<div class="alert alert-success" style="background-color: #dff0d8;border-color: #d6e9c6; color: #3c763d;padding: 15px;">Các bạn sử dụng nếu gặp tình trạng phim đứng hình, phim không load, không chạy thì vui lòng tải lại trang và thử lại</div>
+<br/>                               
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="block" id="detail">
+                   
+                    <div class="blockbody" id="page-info">
+                        
+<div class="detail">
+                        <div class="blocktitle">
+                            <div class="tabs" data-target="#info-film">
+                                <div class="tab active" data-name="text">
+                                    <h3>Danh Sách Tập</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs-content" id="info-film" style="text-align: justify;">
+                            <div class="tab text">
+<ul class="episodelist" style="margin-left:0px;">
 <?php
 $list1 = preg_replace('~\\R~u', "\n", $list0);
 $list1 = explode("\n", $list1);
@@ -237,35 +251,20 @@ $get_tap = explode("|", $list1)['0'];
 <li><a href="/<?php echo $get_tap;?>/<?php echo $slug;?>.html" <?php if ($get_tap == $tap) { echo 'class="active"'; } ?> title="<?php echo $tenphim;?> - Tập <?php echo $get_tap;?>"><?php echo $get_tap;?></a>
                                     </li>
 <?php } } ?>                                    
-</ul>
-
+                                </ul>
                             </div>
-                     
                         </div>
+</div>                        
+                        
                     </div>
                 </div>
             </div>
 
 
 
-            
-            
-            <div class="block" id="comment">
-                <div class="blocktitle">
-                    <div class="title">Bình Luận</div>
-                    <div class="tabs" data-target="#comment .tabs-content">
-                        <div class="tab active" data-name="fb-comment">Facebook</div>
-                        <?php if (file_exists($option)) { ?>
-                                <div class="tab" data-name="edit">
-                                    <h3>Edit</h3>
-                                </div>
-                        <?php } ?>
-                    </div>
-                </div>
-                <div class="blockbody tabs-content">
-                    <div class="tab fb-comments" data-href="https://api-hh.blogspot.com/" data-numposts="5" data-width="100%" data-order-by="reverse_time" data-colorscheme=""></div>
-                </div>
-            </div>
+<?php
+include 'includes/comment.php';
+?>
 
         </div>
         
@@ -279,11 +278,8 @@ include 'includes/MENU.php';
 ?>             
 </div>
 
+</div>
 
-
-        <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v12.0&appId=3305755353076809&autoLogAppEvents=1" nonce="7PAzeko0"></script>
-    </div>
 <?php
 include 'includes/footer.php';
 ?>
