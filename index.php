@@ -36,15 +36,44 @@ $html = curl('https://www.blogger.com/feeds/5770045855602829491/posts/default?ma
 } elseif (($page > 1) and ($type)) {
 $html = file_get_contents('https://www.blogger.com/feeds/5770045855602829491/posts/default/-/'.$type.'?max-results=20&start-index='.(20*($page - 1) + 1));    
 } elseif ($type) {
-$html = file_get_contents('https://www.blogger.com/feeds/5770045855602829491/posts/default/-/'.$type.'?max-results=20');     
+$c_type = './cache/'.$type.'.php'; 
+if (file_exists($c_type)) {
+if((time() - filemtime($c_type)) < 1800) {    
+$html = file_get_contents($c_type);
 } else {
-$html = curl('https://www.blogger.com/feeds/5770045855602829491/posts/default?max-results=20');    
+$html = curl('https://www.blogger.com/feeds/5770045855602829491/posts/default/-/'.$type.'?max-results=20');
+$myfile = fopen($c_type, "w");
+fwrite($myfile, $html);
+fclose($myfile);    
+}
+} else {
+$html = curl('https://www.blogger.com/feeds/5770045855602829491/posts/default/-/'.$type.'?max-results=20');
+$myfile = fopen($c_type, "w");
+fwrite($myfile, $html);
+fclose($myfile);
+}
+} else {
+$c_index = './cache/index.php'; 
+if (file_exists($c_index)) {
+if((time() - filemtime($c_index)) < 1800) {    
+$html = file_get_contents($c_index);
+} else {
+$html = curl('https://www.blogger.com/feeds/5770045855602829491/posts/default?max-results=20');
+$myfile = fopen($c_index, "w");
+fwrite($myfile, $html);
+fclose($myfile);    
+}
+} else {
+$html = curl('https://www.blogger.com/feeds/5770045855602829491/posts/default?max-results=20');
+$myfile = fopen($c_index, "w");
+fwrite($myfile, $html);
+fclose($myfile);
+}
 }
 $all_links = explode('div class="home"', $html);
 foreach ($all_links as $all_links) {
 if (strpos($all_links, 'div class="list"') == true) {  
-$url = explode("'", explode("window.location='/", $all_links)['1'])['0'];
-$slug = explode('.html', explode('/', $url)['2'])['0'];
+$slug = explode(".html", explode("window.location='/2023/04/", $all_links)['1'])['0'];
 $thumb = explode('"', explode('src="', $all_links)['1'])['0'];
 $phim = explode("&lt;td&gt;", $all_links);
 $tenphim = explode("&lt;/td&gt;", $phim['2'])['0'];
