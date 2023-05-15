@@ -1,5 +1,6 @@
 <?php
 error_reporting(E_ERROR | E_PARSE);
+session_start();
 function curl($url){
 		$ch = @curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
@@ -20,7 +21,7 @@ function curl($url){
 		curl_close($ch);
 		return $page;
 }
-$slogan = 'Xem Hoạt Hình 3D, Anime Nhanh Nhất';
+$slogan = 'Xem Hoạt Hình 3D, Anime Thuyết Minh, Vietsub, Lồng Tiếng Nhanh Nhất';
 $description = 'Web xem phim anime online tiếng việt, phim anime vietsub, tổng hợp phim hoạt hình nhật bản mới nhất & hay, hoạt hình trung quốc việt hoá, hoạt hình 3D';
 ?>
 <!DOCTYPE html>
