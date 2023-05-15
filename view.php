@@ -91,24 +91,24 @@ fclose($myfile1);
 ?>
 
 
-<title><?php echo $tenphim;?> - <?php echo $tengoc;?> (<?php echo $nc;?>) | oTVHAY.ORG</title>
-<meta name="description" content="Xem <?php echo $tenphim;?> - <?php echo $tengoc;?> (<?php echo $nc;?>) Thuyết Minh, Lồng Tiếng" />
-    <meta name="keywords" content="oTVHAY.ORG Thuyết Minh" />
-    <meta name="author" content="oTVHAY.ORG" />
+<title><?php echo $tenphim;?> - <?php echo $tengoc;?> | <?php echo $slogan;?></title>
+<meta name="description" content="<?php echo $noidung;?>" />
+    <meta name="keywords" content="<?php echo $slogan;?>" />
+    <meta name="author" content="hhtm.xyz" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="<?php echo $tenphim;?> - <?php echo $tengoc;?> (<?php echo $nc;?>) | oTVHAY.ORG" />
-    <meta name="twitter:description" content="Xem <?php echo $tenphim;?> - <?php echo $tengoc;?> (<?php echo $nc;?>) Thuyết Minh, Lồng Tiếng" />
+    <meta name="twitter:title" content="<?php echo $tenphim;?> - <?php echo $tengoc;?> | <?php echo $slogan;?>" />
+    <meta name="twitter:description" content="<?php echo $noidung;?>" />
     <meta name="twitter:image" content="<?php echo $thumb;?>" />
-    <meta property="og:site_name" content="oTVHAY.ORG" />
+    <meta property="og:site_name" content="<?php echo $slogan;?>" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://otvhay.org/<?php echo $idphim;?>.html" />
-    <meta property="og:title" content="<?php echo $tenphim;?> - <?php echo $tengoc;?> (<?php echo $nc;?>) | oTVHAY.ORG" />
+    <meta property="og:url" content="/<?php echo $idphim;?>.html" />
+    <meta property="og:title" content="<?php echo $tenphim;?> - <?php echo $tengoc;?> | <?php echo $slogan;?>" />
     <meta property="og:image" content="<?php echo $thumb;?>" />
-    <meta property="og:description" content="Xem <?php echo $tenphim;?> - <?php echo $tengoc;?> (<?php echo $nc;?>) Thuyết Minh, Lồng Tiếng" />
+    <meta property="og:description" content="Xem <?php echo $tenphim;?> - <?php echo $tengoc;?> Thuyết Minh, Lồng Tiếng, Vietsub Nhanh Nhất" />
     <meta property="og:locale" content="vi_VN" />
     <meta http-equiv="content-language" content="vi" />
-    <meta itemprop="name" content="<?php echo $tenphim;?> - <?php echo $tengoc;?> (<?php echo $nc;?>) | oTVHAY.ORG" />
-    <meta itemprop="description" content="Xem <?php echo $tenphim;?> - <?php echo $tengoc;?> (<?php echo $nc;?>) Thuyết Minh, Lồng Tiếng" />
+    <meta itemprop="name" content="<?php echo $tenphim;?> - <?php echo $tengoc;?> | <?php echo $slogan;?>" />
+    <meta itemprop="description" content="<?php echo $noidung;?>" />
     <meta itemprop="image" content="<?php echo $thumb;?>" />
     <link rel="canonical" href="/<?php echo $slug;?>.html" />
 </head>   
@@ -159,13 +159,20 @@ $first = explode('|', $list0)['0'];
                             <a href="/<?php echo $first; ?>/<?php echo $slug; ?>.html" class="btn-watch" title="Xem phim"></a>
                         </div>
                     </div>
-<div id="servers" class="serverlist">
-                            <div class="player-cc">
-                                <div></div>
+                    
+                    
+                    
+                    <div class="detail">
+                        <div class="blocktitle">
+                            <div class="tabs" data-target="#info-film">
+                                <div class="tab active" data-name="text">
+                                    <h3>Danh Sách Tập</h3>
+                                </div>
                             </div>
-                            <div class="server">
-
-                                <ul class="episodelist">
+                        </div>
+                        <div class="tabs-content" id="info-film" style="text-align: justify;">
+                            <div class="tab text">
+<ul class="episodelist" style="margin-left:0px; border-bottom: 1px solid #e7e7e7;">
 <?php
 $list1 = preg_replace('~\\R~u', "\n", $list0);
 $list1 = explode("\n", $list1);
@@ -178,8 +185,8 @@ $get_tap = explode("|", $list1)['0'];
 <?php } } ?>                                    
                                 </ul>
                             </div>
-</div>
-
+                        </div>
+                    </div>                    
 
                     <div class="detail">
                         <div class="blocktitle">
@@ -189,27 +196,17 @@ $get_tap = explode("|", $list1)['0'];
                                 </div>
                             </div>
                         </div>
-                        <div class="tabs-content" id="info-film">
+                        <div class="tabs-content" id="info-film" style="text-align: justify;">
                             <div class="tab text">
                                 <?php echo $noidung;?>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="block" id="comment">
-                    <div class="blocktitle">
-                        <div class="title">Bình luận</div>
-                        <div class="tabs" data-target="#comment .tabs-content">
-                            <div class="tab active" data-name="tvh-comment">Facebook</div>
-                        </div>
-                    </div>
-                    <div class="blockbody tabs-content">
-                        <div class="comment">
-                            <div class="fb-comments" data-href="https://api-hh.blogspot.com/" data-numposts="5" data-width="100%" data-order-by="reverse_time" data-colorscheme=""></div>
-                        </div>
-                    </div>
-                </div>
-
+                
+<?php
+include 'includes/comment.php';
+?>
             </div>
         </div>
         
@@ -222,12 +219,7 @@ include 'includes/BXH.php';
 include 'includes/MENU.php';
 ?>             
 </div>
-
-
-
-        <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v12.0&appId=3305755353076809&autoLogAppEvents=1" nonce="7PAzeko0"></script>
-    </div>
+</div>
       
 <?php
 include 'includes/footer.php';
