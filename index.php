@@ -36,7 +36,7 @@ $html = curl('https://www.blogger.com/feeds/5770045855602829491/posts/default?ma
 } elseif (($page > 1) and ($type)) {
 $html = curl('https://www.blogger.com/feeds/5770045855602829491/posts/default/-/'.$type.'?max-results=20&start-index='.(20*($page - 1) + 1));    
 } elseif ($type) {
-$c_type = $_SERVER['HTTP_HOST'].'/cache/'.$type.'.php'; 
+$c_type = './cache/'.$type.'.php'; 
 if (file_exists($c_type)) {
 if((time() - filemtime($c_type)) < 1800) {    
 $html = curl($c_type);
@@ -53,7 +53,7 @@ fwrite($myfile, $html);
 fclose($myfile);
 }
 } else {
-$c_index = $_SERVER['HTTP_HOST'].'/cache/index.php'; 
+$c_index = './cache/index.php'; 
 if (file_exists($c_index)) {
 if((time() - filemtime($c_index)) < 1800) {    
 $html = curl($c_index);
