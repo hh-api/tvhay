@@ -34,12 +34,12 @@ $type = str_replace(' ', '%20', $type);
 if (($page > 1) and (!$type)) {
 $html = curl('https://www.blogger.com/feeds/5770045855602829491/posts/default?max-results=20&start-index='.(20*($page - 1) + 1));
 } elseif (($page > 1) and ($type)) {
-$html = file_get_contents('https://www.blogger.com/feeds/5770045855602829491/posts/default/-/'.$type.'?max-results=20&start-index='.(20*($page - 1) + 1));    
+$html = curl('https://www.blogger.com/feeds/5770045855602829491/posts/default/-/'.$type.'?max-results=20&start-index='.(20*($page - 1) + 1));    
 } elseif ($type) {
-$c_type = './cache/'.$type.'.php'; 
+$c_type = $_SERVER['HTTP_HOST'].'/cache/'.$type.'.php'; 
 if (file_exists($c_type)) {
 if((time() - filemtime($c_type)) < 1800) {    
-$html = file_get_contents($c_type);
+$html = curl($c_type);
 } else {
 $html = curl('https://www.blogger.com/feeds/5770045855602829491/posts/default/-/'.$type.'?max-results=20');
 $myfile = fopen($c_type, "w");
@@ -53,10 +53,10 @@ fwrite($myfile, $html);
 fclose($myfile);
 }
 } else {
-$c_index = './cache/index.php'; 
+$c_index = $_SERVER['HTTP_HOST'].'/cache/index.php'; 
 if (file_exists($c_index)) {
 if((time() - filemtime($c_index)) < 1800) {    
-$html = file_get_contents($c_index);
+$html = curl($c_index);
 } else {
 $html = curl('https://www.blogger.com/feeds/5770045855602829491/posts/default?max-results=20');
 $myfile = fopen($c_index, "w");
