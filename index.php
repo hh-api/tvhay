@@ -39,7 +39,7 @@ $html = curl('https://www.blogger.com/feeds/5770045855602829491/posts/default/-/
 $c_type = './cache/'.$type.'.php'; 
 if (file_exists($c_type)) {
 if((time() - filemtime($c_type)) < 1800) {    
-$html = curl($c_type);
+$html = file_get_contents($c_type);
 } else {
 $html = curl('https://www.blogger.com/feeds/5770045855602829491/posts/default/-/'.$type.'?max-results=20');
 $myfile = fopen($c_type, "w");
@@ -56,7 +56,7 @@ fclose($myfile);
 $c_index = './cache/index.php'; 
 if (file_exists($c_index)) {
 if((time() - filemtime($c_index)) < 1800) {    
-$html = curl($c_index);
+$html = file_get_contents($c_index);
 } else {
 $html = curl('https://www.blogger.com/feeds/5770045855602829491/posts/default?max-results=20');
 $myfile = fopen($c_index, "w");
